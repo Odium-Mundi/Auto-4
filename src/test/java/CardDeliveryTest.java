@@ -18,7 +18,7 @@ public class CardDeliveryTest {
         $("[name='phone']").setValue("+79200000000");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
-        $(withText("Успешная авторизация")).waitUntil(Condition.visible, 15000);
+        $(withText("Успешно!")).waitUntil(Condition.visible, 15000);
         // TODO:
     }
 }
