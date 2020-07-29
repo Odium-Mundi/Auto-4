@@ -1,3 +1,5 @@
+package ru.netology;
+
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,6 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
@@ -24,7 +27,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодар");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(3).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("Паршикова Виолетта");
+        $("[data-test-id='name'] .input__control").setValue("Паршикова Виолетта");
         $("[name='phone']").setValue("+79200000000");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -37,7 +40,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодар");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(100500).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("Паршикова Виолетта");
+        $("[data-test-id='name'] .input__control").setValue("Паршикова Виолетта");
         $("[name='phone']").setValue("+79200000000");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -50,7 +53,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодар");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("Паршикова Виолетта");
+        $("[data-test-id='name'] .input__control").setValue("Паршикова Виолетта");
         $("[name='phone']").setValue("+79200000000");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -63,7 +66,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Krasnodar");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(4).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("Паршикова Виолетта");
+        $("[data-test-id='name'] .input__control").setValue("Паршикова Виолетта");
         $("[name='phone']").setValue("+79200000000");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -77,7 +80,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодыр");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(4).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("Паршикова Виолетта");
+        $("[data-test-id='name'] .input__control").setValue("Паршикова Виолетта");
         $("[name='phone']").setValue("+79200000000");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -90,7 +93,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодар");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(4).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("Parshikova Vi");
+        $("[data-test-id='name'] .input__control").setValue("Parshikova Vi");
         $("[name='phone']").setValue("+79200000000");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -103,7 +106,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодар");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(4).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("Паришкова %Хах");
+        $("[data-test-id='name'] .input__control").setValue("Паришкова %Хах");
         $("[name='phone']").setValue("+79200000000");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -117,7 +120,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодар");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(4).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("К-катя К-катя");
+        $("[data-test-id='name'] .input__control").setValue("К-катя К-катя");
         $("[name='phone']").setValue("+79200000000");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -130,7 +133,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодар");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(4).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("К-катя К-катя");
+        $("[data-test-id='name'] .input__control").setValue("К-катя К-катя");
         $("[name='phone']").setValue("+7920");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -143,7 +146,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодар");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(4).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("К-катя К-катя");
+        $("[data-test-id='name'] .input__control").setValue("К-катя К-катя");
         $("[name='phone']").setValue("89200000000");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -156,7 +159,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодар");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(4).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("К-катя К-катя");
+        $("[data-test-id='name'] .input__control").setValue("К-катя К-катя");
         $("[name='phone']").setValue("+7920000000%");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -169,7 +172,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодар");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(4).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("К-катя К-катя");
+        $("[data-test-id='name'] .input__control").setValue("К-катя К-катя");
         $("[name='phone']").setValue("+792000000002");
         $(".checkbox__box").click();
         $(byText("Забронировать")).click();
@@ -182,10 +185,9 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Краснодар");
         $("[placeholder='Дата встречи'").sendKeys(Keys.LEFT_SHIFT, Keys.HOME, Keys.DELETE);
         $("[placeholder='Дата встречи'").setValue(date.plusDays(4).format(DateTimeFormatter.ofPattern(("dd.MM.yyyy"))));
-        $("[data-test-id=\"name\"] .input__control").setValue("К-катя К-катя");
+        $("[data-test-id='name'] .input__control").setValue("К-катя К-катя");
         $("[name='phone']").setValue("+79200000000");
         $(byText("Забронировать")).click();
-        String color = $(withText("Я соглашаюсь с условиями")).waitUntil(Condition.visible, 1500).getCssValue("color");
-        Assertions.assertEquals("rgba(255, 92, 92, 1)", color);
+        $("[data-test-id='agreement'].input_invalid").shouldHave(text("Я соглашаюсь с условиями"));
     }
 }
